@@ -126,6 +126,18 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
    }
 });
 
+/*================== CONTACT ME ====================*/
+const submit = document.getElementById('submit')
+
+submit.addEventListener('click', () => {
+   const name = document.getElementById('name').value
+   const email = document.getElementById('email').value
+   const subject = document.getElementById('subject').value
+   const message = document.getElementById('message').value
+
+   submit.href = `mailto:gabriel.yamashita01@gmail.com?subject=${subject}&body=${message}%0D%0A%0D%0A%0D%0AEmail de Contato: ${email}%0D%0AAtt. ${name}`
+})
+
 /*=========== SCROLL SECTIONS ACTIVE LINK ==========*/
 const sections = document.querySelectorAll('section[id]')
 
