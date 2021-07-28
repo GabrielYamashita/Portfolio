@@ -135,7 +135,7 @@ submit.addEventListener('click', () => {
    const subject = document.getElementById('subject').value
    const message = document.getElementById('message').value
 
-   submit.href = `mailto:gabriel.yamashita01@gmail.com?subject=${subject}&body=${message}\n\n\nEmail de Contato: ${email}\nAtt. ${name}`
+   submit.href = `mailto:gabriel.yamashita01@gmail.com?subject=${subject}&body=${message}%0D%0A%0D%0AEmail de Contato: ${email}%0D%0AAtt. ${name}`
 })
 
 /*=========== SCROLL SECTIONS ACTIVE LINK ==========*/
