@@ -5,15 +5,15 @@ const navMenu = document.getElementById('nav-menu'),
 
 /*======= MENU SHOW =======*/
 /* Validate if constant exists */
-if(navToggle){
-   navToggle.addEventListener('click', () =>{
+if (navToggle){
+   navToggle.addEventListener('click', () => {
       navMenu.classList.add('show-menu')
    })
 }
 
 /*======= MENU HIDDEN =======*/
 /* Validate if constant exists */
-if(navClose){
+if (navClose) {
    navClose.addEventListener('click', () => {
       navMenu.classList.remove('show-menu')
    })
@@ -22,7 +22,7 @@ if(navClose){
 /*============== REMOVE MENU MOBILE ==============*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
@@ -33,18 +33,18 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const skillsContent = document.getElementsByClassName('skills__content'),
       skillsHeader = document.querySelectorAll('.skills__header')
 
-function toggleSkills(){
+function toggleSkills() {
    let itemClass = this.parentNode.className
 
-   for(i = 0; i < skillsContent.length; i++){
+   for (i = 0; i < skillsContent.length; i++) {
       skillsContent[i].className = 'skills__content skills__close'
    }
-   if(itemClass === 'skills__content skills__close'){
+   if (itemClass === 'skills__content skills__close') {
       this.parentNode.className = 'skills__content skills__open'
    }
 }
 
-skillsHeader.forEach((el) =>{
+skillsHeader.forEach((el) => {
    el.addEventListener('click', toggleSkills)
 })
 
@@ -53,15 +53,15 @@ const tabs = document.querySelectorAll('[data-target]'),
       tabContents = document.querySelectorAll('[data-content]')
 
 tabs.forEach(tab => {
-   tab.addEventListener('click', () =>{
+   tab.addEventListener('click', () => {
       const target = document.querySelector(tab.dataset.target)
 
-      tabContents.forEach(tabContent =>{
+      tabContents.forEach(tabContent => {
          tabContent.classList.remove('qualification__active')
       })
       target.classList.add('qualification__active')
 
-      tabs.forEach(tab =>{
+      tabs.forEach(tab => {
          tab.classList.remove('qualification__active')
       })
       tab.classList.add('qualification__active')
@@ -73,19 +73,19 @@ const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
       modalCloses = document.querySelectorAll('.services__modal-close')
 
-let modal = function(modalClick){
+let modal = function(modalClick) {
    modalViews[modalClick].classList.add('active-modal')
 }
 
 modalBtns.forEach((modalBtn, i) => {
-   modalBtn.addEventListener('click', () =>{
+   modalBtn.addEventListener('click', () => {
       modal(i)
    })
 })
 
-modalCloses.forEach((modalClose) =>{
-   modalClose.addEventListener('click', () =>{
-      modalViews.forEach((modalView) =>{
+modalCloses.forEach((modalClose) => {
+   modalClose.addEventListener('click', () => {
+      modalViews.forEach((modalView) => {
          modalView.classList.remove('active-modal')
       })
    })
@@ -119,7 +119,7 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
      clickable: true,
      dynamicBullets: true,
    },
-   breakpoints:{
+   breakpoints: {
       568:{
          slidesPerView: 2, 
       }
@@ -141,17 +141,17 @@ submit.addEventListener('click', () => {
 /*=========== SCROLL SECTIONS ACTIVE LINK ==========*/
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
+function scrollActive() {
     const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
+    sections.forEach(current => {
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
         sectionId = current.getAttribute('id')
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
+        }else {
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
@@ -159,26 +159,26 @@ function scrollActive(){
 window.addEventListener('scroll', scrollActive)
 
 /*============ CHANGE BACKGROUND HEADER ============*/
-function scrollHeader(){
+function scrollHeader() {
    const nav = document.getElementById('header')
    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-   if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+   if (this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
 /*================ SHOW SCROLL UP =================*/
-function scrollUp(){
+function scrollUp() {
    const scrollUp = document.getElementById('scroll-up');
    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-   if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+   if (this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
 /*================ DARK LIGHT THEME ================*/
-function scrollTop(){
+function scrollTop() {
    const scrollTop = document.getElementById('scroll-top');
    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-   if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+   if (this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollTop)
 
