@@ -815,6 +815,7 @@ img{
 /*================== PROJECT IN MIND ==================*/
 .project{
    text-align: center;
+   display: none;
 }
 
 .project__bg{
