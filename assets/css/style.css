@@ -192,6 +192,7 @@ img{
    font-weight: var(--font-medium);
 }
 
+
 .skip-nav-link:focus{
    transform: translateY(0);
 }
