@@ -178,6 +178,24 @@ img{
 }
 
 /*================= NAV =================*/
+.skip-nav-link{
+   background-color: var(--first-color);
+   padding: .5rem 1.5rem;
+   border-radius: 0 0 0.5rem 0.5rem;
+   color: #FFF;
+   position: absolute;
+   left: .5rem;
+   transform: translateY(-100%);
+   transition: transform 325ms ease-in;
+   border-width: 0px;
+   border-color: #FFF;
+   font-weight: var(--font-medium);
+}
+
+.skip-nav-link:focus{
+   transform: translateY(0);
+}
+
 .nav{
    max-width: 968px;
    height: var(--header-height);
