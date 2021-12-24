@@ -185,7 +185,7 @@ img{
    color: #FFF;
    position: absolute;
    left: .5rem;
-   transform: translateY(-100%);
+   transform: translateY(-120%);
    transition: transform 325ms ease-in;
    border-width: 0px;
    border-color: #FFF;
