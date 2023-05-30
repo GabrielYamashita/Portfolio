@@ -319,6 +319,9 @@ img{
    fill: var(--first-color);
 }
 
+.home__blob-img{
+   width: 350px;
+}
 
 .home__data{
    grid-column: 1/3;
