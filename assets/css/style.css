@@ -319,9 +319,9 @@ img{
    fill: var(--first-color);
 }
 
-.home__blob-img{
-   width: 2000px;
-   height: auto;
+.home__blob-img {
+   width: 350px;
+   /* height: auto; */
 }
 
 .home__data{
